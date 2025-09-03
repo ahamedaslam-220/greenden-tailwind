@@ -17,7 +17,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="styl
 
         <h1 class="text-2xl ">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -39,15 +39,37 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="styl
 
     </nav>
 
+    <!-- side navbar -->
+
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000"
+        style="width: 50%; height: 100vh; right:-50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">x</p>
+        </div>
+        <ul class="flex gap-10 text-center text-gray-600 md:flex flex-col">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a class="hover:underline hover:text-black" href="product.html">Product</a>
+            </li>
+
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
+
     <!-- Products -->
 
-    
+
     <section class=" text-center mt-5">
         <h1 class="font-bold text-3xl">Our Products</h1>
-        <input type="text" placeholder="Search for a product..." class="border border-black mt-5 p-2"
+        <input id="search" type="text" placeholder="Search for a product..." class="border border-black mt-5 p-2"
             style="width: 80%;">
 
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
 
             <div>
                 <img src="./Images/product_1.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
@@ -55,43 +77,43 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="styl
                 <p>$20</p>
             </div>
 
-             <div>
+            <div>
                 <img src="./Images/product_2.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Fiddle Leaf Fig Plant</h1>
                 <p>$20</p>
             </div>
 
-             <div>
+            <div>
                 <img src="./Images/product_3.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Monstera Plant</h1>
                 <p>$20</p>
             </div>
 
-             <div>
+            <div>
                 <img src="./Images/product_4.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Lilly Plant</h1>
                 <p>$20</p>
             </div>
 
-             <div>
+            <div>
                 <img src="./Images/product_5.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Chhese Plant</h1>
                 <p>$20</p>
             </div>
 
-             <div>
+            <div>
                 <img src="./Images/product_6.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Monster Plant</h1>
                 <p>$20</p>
             </div>
 
-             <div>
+            <div>
                 <img src="./Images/product_7.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Areca Palm Plant</h1>
                 <p>$20</p>
             </div>
 
-             <div>
+            <div>
                 <img src="./Images/product_8.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Potted Green Plant</h1>
                 <p>$20</p>
@@ -108,6 +130,10 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="styl
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit </p>
         <p>@ 2021 Greenday.com</p>
     </section>
+
+    <script src="product.js ">
+
+    </script>
 
 </body>
 
